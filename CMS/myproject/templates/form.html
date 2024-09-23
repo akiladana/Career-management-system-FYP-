@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CV Generator</title>
+</head>
+<body>
+    <h1>CV Generator</h1>
+    <form method="POST" action="{% url 'generate_cv' %}">
+        {% csrf_token %}
+        <label>Name:</label>
+        <input type="text" name="name"><br><br>
+        <label>Email:</label>
+        <input type="text" name="email"><br><br>
+        <label>Education:</label>
+        <input type="text" name="education"><br><br>
+        <label>Experience:</label>
+        <input type="text" name="experience"><br><br>
+        <label>Skills:</label>
+        <input type="text" name="skills"><br><br>
+        <!-- Add other fields as necessary -->
+        <input type="submit" value="Generate CV">
+    </form>
+</body>
+</html>
